@@ -1,0 +1,7 @@
+*{
+ font-family: Arial, Helvetica, sans-serif; 
+ background-color: #D5E7D6;
+}
+.experience{
+    display: flex;
+}
