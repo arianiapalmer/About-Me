@@ -11,6 +11,8 @@ header{
     font-size: 5em;
     text-align: center;
     padding: 10px;
+    border-bottom: black;
+    border-style: dashed;
 }
 body{
     /* border-style: ; */
@@ -21,9 +23,15 @@ body{
 }
 h3{
     font-size: 1.5em;
+    padding: 2%;
+    text-decoration: underline;
 }
 h2{
     font-size: 2em;
+}
+li{
+    padding:0.5%;
+    list-style-type: circle;
 }
 img{
     /* display: block; */
@@ -31,6 +39,7 @@ img{
     margin-right: auto;
     /* width: 250px; */
     height: 200px;
+    /* box-shadow:#96bf98; */
 }
 .container{
     display: flex;
