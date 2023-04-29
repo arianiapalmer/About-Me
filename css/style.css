@@ -3,9 +3,6 @@
  margin: 10px;
  padding: 10px;
 }
-body{
-
-}
 header{
     background-color: #D5E7D6;
     font-size: 5em;
@@ -13,6 +10,7 @@ header{
     padding: 10px;
     border-bottom: black;
     border-style: dashed;
+    text-shadow: 2px 2px 5px #668e68;
 }
 body{
     /* border-style: ; */
@@ -23,15 +21,26 @@ body{
 }
 h3{
     font-size: 1.5em;
-    padding: 2%;
-    text-decoration: underline;
+    padding: 10px;
+    background-color: rgba(224, 170, 33, 0.24);
+    border-left: rgb(233, 182, 53);
+    border-style: solid;
 }
 h2{
     font-size: 2em;
 }
+p{
+    margin-left: 15px;
+}
 li{
-    padding:0.5%;
-    list-style-type: circle;
+    padding:10px 30px;
+    /* list-style-image: url('/img/star-icon.png') ; */
+    list-style: none;
+    background-image: url('/img/star-icon.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px;
+ 
 }
 img{
     /* display: block; */
@@ -41,13 +50,13 @@ img{
     height: 200px;
     /* box-shadow:#96bf98; */
 }
-.container{
+.bio-container{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     border-radius: 10px;
-
+    border-style: solid;
 }
 .text{
     /* font-size: 20px; */
@@ -60,4 +69,7 @@ img{
     width: 150px;
     float: left;
     border: #96bf98;
+}
+.container{
+    border
 }
