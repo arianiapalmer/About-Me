@@ -46,7 +46,6 @@ function askNumber(){
     }else{
       alert('That was too low, guess again!');
     }
-    allowedAttempts-=1;
   }
   console.log('There are ', allowedAttempts, 'allowed attempts left');
 }
