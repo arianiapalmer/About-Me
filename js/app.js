@@ -1,7 +1,4 @@
 'use strict';
-function random(number) {
-  return Math.floor(Math.random()*number);
-}
 
 let userName = prompt('Hello! Welcome to my About Me! What is your name?');
 alert(`Nice to meet you ${userName}, thanks for stopping by! Lets play a game to help you get to know me better - for each question, answer either yes or no.`);
@@ -46,15 +43,15 @@ function askNumber(){
     }
   }
 }
-function multipleChoice(){
-  let allowedAttempts = 6;
-  let 
-  switch()
+// function multipleChoice(){
+//   let allowedAttempts = 6;
+//   let answerChoices = [];
+//   switch()
 
-}
+// }
 
 // quiz();
 // askNumber();
-multipleChoice();
+// multipleChoice();
 
 alert('Thanks for playing!');

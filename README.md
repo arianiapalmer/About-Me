@@ -2,7 +2,7 @@
 
 ## About Me
 
-I build an app that allow's the user to get to know the author, me. This app takes the user through a series of yes or no questions about me, as well as a number guessing game. At the end of the quiz and game, the user is presented a score of how many questions they answered correctly
+I built an app that allows the user to get to know the author, me. This app takes the user through a series of yes or no questions about the author, as well as a number guessing game. At the end of the quiz and game, the user is presented a score of how many questions they answered correctly
 ### Author: Ariania Palmer
 
 ### Links and Resources
