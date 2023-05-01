@@ -26,6 +26,7 @@ function quiz(){
   }
 }
 quiz();
+alert('Thanks for playing!');
 console.log('quiz done');
 
 // function question1() {
