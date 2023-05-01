@@ -28,36 +28,33 @@ function quiz(){
 }
 function askNumber(){
   let allowedAttempts = 4;
-  // let randomNumber = function(min, max){
-  //   min = Math.ceil(1);
-  //   max = Math.floor(100);
-  //   return Math.floor(Math.random() * (max - min) + min);
-  // };
-  let randomNumber = 54;
-  console.log('The randomly generated number is....',randomNumber);
+  let randomNumber = Math.floor(Math.random() * (100 - 0) + 0);
   for(let i=0; i<allowedAttempts; i++){
     let userNumber = prompt('Guess a number 1 - 100');
-    console.log('This is attempt....',allowedAttempts);
-    if(userNumber === randomNumber){
+    if(userNumber == randomNumber){
       alert('Yep, you guessed it!');
       userScore+=1;
-    }else if(userNumber < randomNumber){
+    }
+    else if(userNumber > randomNumber){
       alert('That guess was too high, try again!');
-    }else{
-      alert('That was too low, guess again!');
+    }
+    else if(userNumber < randomNumber){
+      alert('That guess was too low, try again!');
+    }
+    else{
+      alert('Try again!');
     }
   }
-  console.log('There are ', allowedAttempts, 'allowed attempts left');
 }
-// function multipleChoice(){
-//   let allowedAttempts = 6;
-//   let 
-//   switch()
+function multipleChoice(){
+  let allowedAttempts = 6;
+  let 
+  switch()
 
-// }
+}
 
 // quiz();
-askNumber();
-// multipleChoice();
+// askNumber();
+multipleChoice();
 
 alert('Thanks for playing!');
