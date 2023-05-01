@@ -8,25 +8,21 @@ alert(`Nice to meet you ${userName}, thanks for stopping by! Lets play a game to
 
 let questions = [`Ok ${userName}, let's get started. Here is your first question: Do I have a cat? y/n? `, 'Next question - do i know how to roller skate, yes or no?','Okay, question 3 - do I have any dogs, yes or no?','Question 4 - am I a polygot?',`Ok ${userName}, thins are going to get tricky now. Let me ask you, do I know how to whistle?`];
 const correctAnswers = ['yes','yes','no','no','yes'];
-const correctAnswers2 = ['y', 'y','no','no','yes'];
+const correctAnswers2 = ['y', 'y','n','n','y'];
 const answerMessage = ['Yes! I have two cats!', 'Yes! I love roller skating!', 'Nope! I don\'t have any dogs.','No I am not a polygot, though I wish I were!', 'Yes - just barely, but I can whistle!'];
 
-// function yesNo(answer){
-//   userAnswers.toLowerCase
-// }
 function quiz(){
   let userAnswers = [];
-  for(var i=0; i<=questions.length; i++){
+  for(let i=0; i<questions.length; i++){
     userAnswers.push(prompt(questions[i]));
-    console.log('looping through questions...');
-    if(userAnswers[i].toLowerCase === correctAnswers[i].toLowerCase || correctAnswers2[i].toLowerCase){
+    if(userAnswers[i].toLowerCase() === correctAnswers[i] || userAnswers[i].toLowerCase() === correctAnswers2[i]){
       alert(answerMessage[i]);
-      console.log('user answer received');
-    }else{
-      alert('Sorry, you got that wrong!');
+      console.log('correct answer');
     }
-    i++;
-    console.log('i has been incremented...');
+    else{
+      alert('Sorry, you got that wrong!');
+      console.log('incorrect answer');
+    }
   }
 }
 quiz();
