@@ -6,7 +6,7 @@ let questions = [`Ok ${userName}, let's get started. Here is your first question
 const correctAnswers = ['yes','yes','no','no','yes'];
 const correctAnswers2 = ['y', 'y','n','n','y'];
 const answerMessage = ['Yes! I have two cats!', 'Yes! I love roller skating!', 'Nope! I don\'t have any dogs.','No I am not a polygot, though I wish I were!', 'Yes - just barely, but I can whistle!'];
-let userScore = 0;
+// let userScore = 0;
 
 function quiz(){
   let userAnswers = [];
@@ -14,7 +14,7 @@ function quiz(){
     userAnswers.push(prompt(questions[i]));
     if(userAnswers[i].toLowerCase() === correctAnswers[i] || userAnswers[i].toLowerCase() === correctAnswers2[i]){
       alert(answerMessage[i]);
-      userScore+=1;
+      // userScore+=1;
     }
     else{
       alert('Sorry, you got that wrong!');
@@ -28,7 +28,7 @@ function askNumber(){
     let userNumber = prompt('Guess a number 1 - 100');
     if(userNumber == randomNumber){
       alert('Yep, you guessed it!');
-      userScore+=1;
+      // userScore+=1;
     }
     else if(userNumber > randomNumber){
       alert('That guess was too high, try again!');
