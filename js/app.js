@@ -14,12 +14,10 @@ function quiz(){
     userAnswers.push(prompt(questions[i]));
     if(userAnswers[i].toLowerCase() === correctAnswers[i] || userAnswers[i].toLowerCase() === correctAnswers2[i]){
       alert(answerMessage[i]);
-      console.log('correct answer');
       userScore+=1;
     }
     else{
       alert('Sorry, you got that wrong!');
-      console.log('incorrect answer');
     }
   }
 }
@@ -45,13 +43,15 @@ function askNumber(){
 }
 // function multipleChoice(){
 //   let allowedAttempts = 6;
-//   let answerChoices = [];
-//   switch()
+//   let answerChoices = ['red','green','blue'];
+//   while (allowedAttempts <= 6){
+
+//   }
 
 // }
 
-// quiz();
-// askNumber();
+quiz();
+askNumber();
 // multipleChoice();
 
 alert('Thanks for playing!');
