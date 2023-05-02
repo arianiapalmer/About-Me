@@ -6,7 +6,8 @@ let questions = [`Ok ${userName}, let's get started. Here is your first question
 const correctAnswers = ['yes','yes','no','no','yes'];
 const correctAnswers2 = ['y', 'y','n','n','y'];
 const answerMessage = ['Yes! I have two cats!', 'Yes! I love roller skating!', 'Nope! I don\'t have any dogs.','No I am not a polygot, though I wish I were!', 'Yes - just barely, but I can whistle!'];
-// let userScore = 0;
+let userScore = 0;
+let maxScore = 7;
 
 function quiz(){
   let userAnswers = [];
@@ -14,7 +15,7 @@ function quiz(){
     userAnswers.push(prompt(questions[i]));
     if(userAnswers[i].toLowerCase() === correctAnswers[i] || userAnswers[i].toLowerCase() === correctAnswers2[i]){
       alert(answerMessage[i]);
-      // userScore+=1;
+      userScore+=1;
     }
     else{
       alert('Sorry, you got that wrong!');
@@ -23,12 +24,12 @@ function quiz(){
 }
 function askNumber(){
   let allowedAttempts = 4;
-  let randomNumber = Math.floor(Math.random() * (100 - 0) + 0);
+  let randomNumber = Math.random() * (100 - 0) + 0;
   for(let i=0; i<allowedAttempts; i++){
     let userNumber = prompt('Guess a number 1 - 100');
     if(userNumber == randomNumber){
       alert('Yep, you guessed it!');
-      // userScore+=1;
+      userScore+=1;
     }
     else if(userNumber > randomNumber){
       alert('That guess was too high, try again!');
@@ -43,15 +44,23 @@ function askNumber(){
 }
 // function multipleChoice(){
 //   let allowedAttempts = 6;
-//   let answerChoices = ['red','green','blue'];
-//   while (allowedAttempts <= 6){
-
+//   let answerChoices = ['red', 'yellow', 'blue'];
+//   for (let i=0; i<allowedAttempts; i++){
+//     let userChoice = prompt('Name a primary color');
+//     console.log('user choice is......'+ userChoice);
+//     if(answerChoices.includes(userChoice.toLowerCase)){
+//       console.log('that was correct.......');
+//       alert('That\'s correct!');
+//       userScore+=1;
+//     }else{
+//       alert('Nope, guess again!');
+//     }
 //   }
-
 // }
+
 
 quiz();
 askNumber();
 // multipleChoice();
 
-alert('Thanks for playing!');
+alert(`You got ${userScore} out of ${maxScore}! Congrats!`);
