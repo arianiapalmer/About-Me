@@ -42,25 +42,28 @@ function askNumber(){
     }
   }
 }
-// function multipleChoice(){
-//   let allowedAttempts = 6;
-//   let answerChoices = ['red', 'yellow', 'blue'];
-//   for (let i=0; i<allowedAttempts; i++){
-//     let userChoice = prompt('Name a primary color');
-//     console.log('user choice is......'+ userChoice);
-//     if(answerChoices.includes(userChoice.toLowerCase)){
-//       console.log('that was correct.......');
-//       alert('That\'s correct!');
-//       userScore+=1;
-//     }else{
-//       alert('Nope, guess again!');
-//     }
-//   }
-// }
+function multipleChoice(){
+  let allowedAttempts = 6;
+  let answerChoices = ['red', 'yellow', 'blue'];
+  let userChoice = [];
+  for (let i=0; i<allowedAttempts; i++){
+    userChoice.push(prompt('Name a primary color'));
+    console.log('user choice is......'+ userChoice);
+    console.log('These are the answer choices', answerChoices);
+    if(answerChoices.includes(userChoice[i].toLowerCase)){
+      console.log('that was correct.......');
+      alert('Correct!');
+      userScore+=1;
+    }else{
+      alert('Nope, guess again!');
+    }
+  }
+}
+// 
+// answerChoices.indexOf(userChoice.toLowerCase) !== -1
+// userChoice.toLowerCase == 
+// quiz();
+// askNumber();
+multipleChoice();
 
-
-quiz();
-askNumber();
-// multipleChoice();
-
-alert(`You got ${userScore} out of ${maxScore}! Congrats!`);
+alert(`You guessed ${userScore} correctly out of ${maxScore}! Congrats!`);
