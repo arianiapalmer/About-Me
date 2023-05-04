@@ -45,25 +45,28 @@ function askNumber(){
 function multipleChoice(){
   let allowedAttempts = 6;
   let answerChoices = ['red', 'yellow', 'blue'];
-  let userChoice = [];
+  let userChoice = '';
   for (let i=0; i<allowedAttempts; i++){
-    userChoice.push(prompt('Name a primary color'));
+    userChoice = prompt('Name a primary color');
     console.log('user choice is......'+ userChoice);
     console.log('These are the answer choices', answerChoices);
-    if(answerChoices.includes(userChoice[i].toLowerCase)){
+    if(answerChoices.includes(userChoice.toLowerCase())){
       console.log('that was correct.......');
       alert('Correct!');
       userScore+=1;
+      break;
     }else{
+      if(i===5){
+        alert('Sorry you are incorrect and out of guesses.');
+        break;
+      }
       alert('Nope, guess again!');
     }
   }
 }
-// 
-// answerChoices.indexOf(userChoice.toLowerCase) !== -1
-// userChoice.toLowerCase == 
-// quiz();
-// askNumber();
+
+quiz();
+askNumber();
 multipleChoice();
 
 alert(`You guessed ${userScore} correctly out of ${maxScore}! Congrats!`);
