@@ -1,16 +1,19 @@
 'use strict';
 
-let userName = prompt('Hello! Welcome to my About Me! What is your name?');
-alert(`Nice to meet you ${userName}, thanks for stopping by! Lets play a game to help you get to know me better - for each question, answer either yes or no.`);
-let questions = [`Ok ${userName}, let's get started. Here is your first question: Do I have a cat? y/n? `, 'Next question - do i know how to roller skate, yes or no?','Okay, question 3 - do I have any dogs, yes or no?','Question 4 - am I a polygot?',`Ok ${userName}, thins are going to get tricky now. Let me ask you, do I know how to whistle?`];
+let userName = '';
 const correctAnswers = ['yes','yes','no','no','yes'];
 const correctAnswers2 = ['y', 'y','n','n','y'];
 const answerMessage = ['Yes! I have two cats!', 'Yes! I love roller skating!', 'Nope! I don\'t have any dogs.','No I am not a polygot, though I wish I were!', 'Yes - just barely, but I can whistle!'];
 let userScore = 0;
 let maxScore = 7;
 
+function greeting(){
+  userName = prompt('Hello! Welcome to my About Me! What is your name?');
+  alert(`Nice to meet you ${userName}, thanks for stopping by! Lets play a game to help you get to know me better - for each question, answer either yes or no.`);
+}
 function quiz(){
   let userAnswers = [];
+  let questions = [`Ok ${userName}, let's get started. Here is your first question: Do I have a cat? y/n? `, 'Next question - do i know how to roller skate, yes or no?','Okay, question 3 - do I have any dogs, yes or no?','Question 4 - am I a polygot?',`Ok ${userName}, things are going to get tricky now. Let me ask you, do I know how to whistle?`];
   for(let i=0; i<questions.length; i++){
     userAnswers.push(prompt(questions[i]));
     if(userAnswers[i].toLowerCase() === correctAnswers[i] || userAnswers[i].toLowerCase() === correctAnswers2[i]){
@@ -65,6 +68,7 @@ function multipleChoice(){
   }
 }
 
+greeting();
 quiz();
 askNumber();
 multipleChoice();
