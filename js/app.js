@@ -15,7 +15,7 @@ function quiz(){
   let userAnswers = [];
   let questions = [`Ok ${userName}, let's get started. Here is your first question: Do I have a cat? y/n? `, 'Next question - do i know how to roller skate, yes or no?','Okay, question 3 - do I have any dogs, yes or no?','Question 4 - am I a polygot?',`Ok ${userName}, things are going to get tricky now. Let me ask you, do I know how to whistle?`];
   for(let i=0; i<questions.length; i++){
-    userAnswers.push(prompt(questions[i]));
+    userAnswers.push(prompt(questions[i])); 
     if(userAnswers[i].toLowerCase() === correctAnswers[i] || userAnswers[i].toLowerCase() === correctAnswers2[i]){
       alert(answerMessage[i]);
       userScore+=1;
@@ -51,8 +51,6 @@ function multipleChoice(){
   let userChoice = '';
   for (let i=0; i<allowedAttempts; i++){
     userChoice = prompt('Name a primary color');
-    console.log('user choice is......'+ userChoice);
-    console.log('These are the answer choices', answerChoices);
     if(answerChoices.includes(userChoice.toLowerCase())){
       console.log('that was correct.......');
       alert('Correct!');
@@ -67,7 +65,6 @@ function multipleChoice(){
     }
   }
 }
-
 greeting();
 quiz();
 askNumber();
