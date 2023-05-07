@@ -13,11 +13,7 @@ I built an app that allows the user to get to know the author, me. This app take
 
 ### Lighthouse Accessibility Report Score
 
-* Lab 2 Accessibility score
-![Lab 2 Lighthouse Accessibility Score](img/lighthous-score-lab2.png)
-
-* Lab 3 Accessibility score
-<!-- ![Lab 3 Lighthouse Accessibility Score](img/lighthous-score-lab3.png) -->
-
+* Accessibility score
+![Lighthouse Accessibility Score](img/lighthous-score-lab5.png)
 
 ### Reflections and Comments

@@ -69,5 +69,4 @@ greeting();
 quiz();
 askNumber();
 multipleChoice();
-
 alert(`You guessed ${userScore} correctly out of ${maxScore}! Congrats!`);
